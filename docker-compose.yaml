@@ -19,6 +19,7 @@ services:
             - db
         image: wordpress:latest
         volumes: 
+            - ./config/php.conf.uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
             - ./src/themes:/var/www/html/wp-content/themes
             - ./src/plugins:/var/www/html/wp-content/plugins
             - ./src/uploads:/var/www/html/wp-content/uploads
